@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My personal web</title>
+    <title> {% block title %}{% endblock %} | My personal web</title>
 </head>
 <body>
     <!--Cabecera y menú-->
     <h1>My personal web</h1>
     <ul>
-        <li><a href="/">Cover page</a></li>
-        <li><a href="/about-me/">About</a></li>
-        <li><a href="/portfolio/">Portfolio</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="{% url 'home'%}">Cover page</a></li>
+        <li><a href="{% url 'about'%}">About</a></li>
+        <li><a href="{% url 'portfolio'%}">Portfolio</a></li>
+        <li><a href="{% url 'contact'%}">Contact</a></li>
     </ul>
     <!--Contenido-->
     {% block content %}{% endblock %}
